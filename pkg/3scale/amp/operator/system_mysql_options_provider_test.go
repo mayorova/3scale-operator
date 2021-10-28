@@ -44,11 +44,13 @@ func testSystemMysqlPodTemplateLabels() map[string]string {
 		"app":                          appLabel,
 		"threescale_component":         "system",
 		"threescale_component_element": "mysql",
-		"com.redhat.component-name":    "system-mysql",
-		"com.redhat.component-type":    "application",
-		"com.redhat.component-version": helper.ParseVersion(SystemMySQLImageURL()),
-		"com.redhat.product-name":      "3scale",
-		"com.redhat.product-version":   product.ThreescaleRelease,
+		"com.company":                  "Red_Hat",
+		"rht.subcomp":                  "system-mysql",
+		"rht.subcomp_t":                string(helper.ApplicationType),
+		"rht.comp":                     "3scale",
+		"rht.prod_ver":                 "1.1",
+		"rht.prod_name":                "Red_Hat_Integration",
+		"rht.comp_ver":                 product.ThreescaleRelease,
 		"deploymentConfig":             "system-mysql",
 	}
 }

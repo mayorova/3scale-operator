@@ -27,11 +27,13 @@ func testPodTemplateLabels() map[string]string {
 		"app":                          appLabel,
 		"threescale_component":         "system",
 		"threescale_component_element": "memcache",
-		"com.redhat.component-name":    "system-memcache",
-		"com.redhat.component-type":    "application",
-		"com.redhat.component-version": helper.ParseVersion(SystemMemcachedImageURL()),
-		"com.redhat.product-name":      "3scale",
-		"com.redhat.product-version":   product.ThreescaleRelease,
+		"com.company":                  "Red_Hat",
+		"rht.subcomp":                  "system-memcache",
+		"rht.subcomp_t":                string(helper.ApplicationType),
+		"rht.comp":                     "3scale",
+		"rht.prod_ver":                 "1.1",
+		"rht.prod_name":                "Red_Hat_Integration",
+		"rht.comp_ver":                 product.ThreescaleRelease,
 		"deploymentConfig":             "system-memcache",
 	}
 }
